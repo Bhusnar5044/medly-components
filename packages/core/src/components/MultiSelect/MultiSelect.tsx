@@ -32,6 +32,7 @@ const Component: FC<MultiSelectProps> = memo(
                 showTooltipForHelperAndErrorText,
                 prefix,
                 isCreatable = false,
+                optionAutoWidth,
                 ...restProps
             } = props,
             selectId = useMemo(() => id || label?.toLocaleLowerCase().replace(' ', '') || 'medly-multiSelect', [id, label]);
@@ -230,6 +231,7 @@ const Component: FC<MultiSelectProps> = memo(
                         setIsParentCursorEnabled={setIsParentCursorEnabled}
                         showCreatableOption={!!showCreatableOption}
                         handleCreatableOptionClick={handleCreatableOptionClick}
+                        optionAutoWidth={optionAutoWidth}
                     />
                 )}
             </Wrapper>
@@ -244,6 +246,7 @@ Component.defaultProps = {
     minWidth: '20rem',
     variant: 'filled',
     isSearchable: true,
+    optionAutoWidth: false,
     placeholder: 'Please Select . . .',
     showDecorators: true,
     isCreatable: false
