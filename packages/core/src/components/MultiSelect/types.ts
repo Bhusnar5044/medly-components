@@ -1,5 +1,5 @@
 import { HTMLProps, Omit, WithThemeProp } from '@medly-components/utils';
-import type { Dispatch, FC, RefObject, SetStateAction } from 'react';
+import type { Dispatch, FC, ReactElement, RefObject, SetStateAction } from 'react';
 
 export interface Option {
     value: any;
@@ -7,6 +7,8 @@ export interface Option {
     selected?: boolean;
     disabled?: boolean;
     creatable?: boolean;
+    component?: ReactElement<any>;
+    componentContent?: string[];
 }
 
 export interface DefaultSelected {
@@ -49,6 +51,8 @@ export interface MultiSelectProps extends Omit<HTMLProps<HTMLInputElement>, 'onC
     minWidth?: string;
     /** Takes full width of the parent component */
     fullWidth?: boolean;
+    /** Takes max content width for options modal */
+    optionAutoWidth?: boolean;
     /** Helper Text */
     helperText?: string;
     /** Error Text */

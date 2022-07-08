@@ -13,6 +13,7 @@ export interface OptionsProps extends Omit<HTMLProps<HTMLUListElement>, 'size'> 
     inputValue?: string;
     showCreatableOption?: boolean;
     handleCreatableOptionClick?: (op: Option) => void;
+    optionAutoWidth?: boolean;
 }
 
 export interface OptionStyledProps extends HTMLProps<HTMLLIElement>, WithThemeProp {
