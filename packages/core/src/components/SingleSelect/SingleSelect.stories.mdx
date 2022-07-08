@@ -4,7 +4,7 @@ import { ArrowDropDownCircleIcon, StarIcon } from '@medly-components/icons';
 import { SingleSelect } from './SingleSelect';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
-import { variants, options, sizes, ThemeInterface, OptionProps } from './SingleSelect.stories.tsx';
+import { variants, options, customComponentOptions, sizes, ThemeInterface, OptionProps } from './SingleSelect.stories.tsx';
 
 <Meta title="Core" component={SingleSelect} parameters={{ jest: ['SingleSelect.test.tsx'] }} />
 
@@ -45,7 +45,7 @@ The `SingleSelect` component allows you to pick a value from a list of options. 
 
 Three variants are available `filled`, `outlined` & `flat`.
 
-> **Note**: The `flat` variant does not support the following props; `size`, `required` and `isSearchable`. Also, its not advisable to use `helperText` and `errorText` props in `flat` variant.    
+> **Note**: The `flat` variant does not support the following props; `size`, `required` and `isSearchable`. Also, its not advisable to use `helperText` and `errorText` props in `flat` variant.
 
 <Preview>
     <PreviewContent>
@@ -92,7 +92,7 @@ Three variants are available `filled`, `outlined` & `flat`.
 
 ## Error validation
 
-As mentioned in the `TextField` component, you can pass either  `errorText` or `validator` prop to show the custom message. If you have not passed any of these props, the default html5 error validation message appears.
+As mentioned in the `TextField` component, you can pass either `errorText` or `validator` prop to show the custom message. If you have not passed any of these props, the default html5 error validation message appears.
 
 <Preview>
     <PreviewContent>
@@ -139,6 +139,7 @@ As mentioned in the `TextField` component, you can pass either  `errorText` or `
 </Preview>
 
 ### Error validation with Helper Tooltip
+
 <Preview>
     <PreviewContent>
         {() => {
@@ -215,7 +216,7 @@ Additionally, you can also provide a suffix icon, which also takes the label col
             const [filledValue, setFilledValue] = useState('Dummy4 option'),
                 [outlinedValue, setOutlinedValue] = useState('Dummy4 option');
             return (
-                <>                 
+                <>
                     <SingleSelect
                         suffix={ArrowDropDownCircleIcon}
                         variant="filled"
@@ -234,7 +235,78 @@ Additionally, you can also provide a suffix icon, which also takes the label col
                         label="Pharmacy"
                         includesNestedOptions
                     />
-                  
+                </>
+            );
+        }}
+    </PreviewContent>
+</Preview>
+
+## Custom Component Options
+
+If you want to use custom component options, pass the array of `{label:'' , value:''}` in the options list like below. `componentContent` to make component searchable
+
+```tsx
+const options = [
+    { value: 'Dummy1 option', label: 'Dummy1 option' },
+    {
+        label: 'Dummy2 option',
+        value: [
+            { value: 'Some 1', label: 'Some 1' },
+            { value: 'Some 2', label: 'Some 2' }
+        ],
+        component:<div><Text>Dummy option 2 Title</Text><Text>Dummy description</Text></div>,
+        componentContent:['Dummy2 option','Dummy 2 Title','Dummy description]
+    },
+    {   value: 'Dummy3 option', label: 'Dummy3 option',
+        component:<div><Text>Dummy option 3 Title</Text><Text>Dummy description</Text></div>,
+        componentContent:['Dummy3 option','Dummy 3 Title','Dummy description]
+    }
+];
+```
+
+Provide `optionAutoWidth` flag true to take max content width for options modal.
+
+<Preview>
+    <PreviewContent>
+        {() => {
+            const [filledValue, setFilledValue] = useState('Dummy4 option'),
+                [outlinedValue, setOutlinedValue] = useState('Dummy4 option'),
+                [flatValue, setFlatValue] = useState('Dummy4 option');
+            return (
+                <>
+                    <SingleSelect
+                        variant="filled"
+                        size="S"
+                        errorText="Something wrong"
+                        options={customComponentOptions}
+                        value={filledValue}
+                        onChange={setFilledValue}
+                        label="Pharmacy"
+                        includesNestedOptions
+                        optionAutoWidth
+                    />
+                    <SingleSelect
+                        variant="outlined"
+                        size="S"
+                        errorText="Something wrong"
+                        options={customComponentOptions}
+                        value={outlinedValue}
+                        onChange={setOutlinedValue}
+                        label="Pharmacy"
+                        includesNestedOptions
+                        optionAutoWidth
+                    />
+                    <SingleSelect
+                        variant="flat"
+                        errorText="Something wrong"
+                        options={customComponentOptions}
+                        value={flatValue}
+                        onChange={setFlatValue}
+                        label="Pharmacy"
+                        helperText="Flat Variant"
+                        includesNestedOptions
+                        optionAutoWidth
+                    />
                 </>
             );
         }}
