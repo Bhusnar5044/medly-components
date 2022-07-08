@@ -3,7 +3,7 @@ import { Preview, Story, Meta, Props } from '@storybook/addon-docs/blocks';
 import { StarIcon } from '@medly-components/icons';
 import { boolean, select, text } from '@storybook/addon-knobs';
 import { useState } from 'react';
-import { variants, sizes, options, disabledOptions, ThemeInterface } from './MultiSelect.stories';
+import { variants, sizes, options, optionsWithCustomComponent, disabledOptions, ThemeInterface } from './MultiSelect.stories';
 
 <Meta title="Core/MultiSelect" component={MultiSelect} />
 
@@ -126,6 +126,50 @@ This feature allows you to create new options apart from the existing ones. The 
     </Story>
 </Preview>
 
+## 5. MultiSelect component with custom component options
+
+This feature allows you to add custom component options. pass the array of `{label:'' , value:''}` in the options list like below. `componentContent` to make component searchable
+
+```tsx
+const options = [
+    { value: 'Dummy1 option', label: 'Dummy1 option' },
+    {
+        label: 'Dummy2 option',
+        value: 'Dummy2 option',
+        component:<div><Text>Dummy option 2 Title</Text><Text>Dummy description</Text></div>,
+        componentContent:['Dummy2 option','Dummy 2 Title','Dummy description]
+    },
+    {   value: 'Dummy3 option', label: 'Dummy3 option',
+        component:<div><Text>Dummy option 3 Title</Text><Text>Dummy description</Text></div>,
+        componentContent:['Dummy3 option','Dummy 3 Title','Dummy description]
+    }
+];
+```
+
+Pass `optionAutoWidth` to allows the max-content width for options modal.
+
+<Preview withToolbar>
+    <Story name="WithCustomComponentOptions">
+        {() => {
+            const [values, setValues] = useState(['lorem pharmacy', 'a pharmacy']);
+            return (
+                <MultiSelect
+                    options={optionsWithCustomComponent}
+                    values={values}
+                    onChange={setValues}
+                    size={select('Size', sizes, 'M')}
+                    label={text('Label', 'Pharmacy')}
+                    placeholder="Search Pharmacy"
+                    isSearchable={boolean('Is Searchable', true)}
+                    helperText={text('Helper Text', 'We will show reports based on Pharmacy')}
+                    variant={select('Variant', variants, 'filled')}
+                    optionAutoWidth
+                />
+            );
+        }}
+    </Story>
+</Preview>
+
 ## Props
 
 This component offers the following props mentioned in the table below:
@@ -137,3 +181,4 @@ This component offers the following props mentioned in the table below:
 This theme is shared between single select and multi select.
 
 <Props of={ThemeInterface} />
+```
