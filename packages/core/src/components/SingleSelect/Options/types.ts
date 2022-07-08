@@ -1,7 +1,7 @@
 import { HTMLProps } from '@medly-components/utils';
 import { Option } from '../types';
 
-interface StyledProps {
+export interface StyledOptionsProps {
     size: 'S' | 'M';
     isNested?: boolean;
     maxWidth?: string;
@@ -10,11 +10,9 @@ interface StyledProps {
     variant: 'outlined' | 'filled' | 'flat' | 'fusion';
 }
 
-export interface OptionsProps extends Omit<HTMLProps<HTMLUListElement>, 'size'>, StyledProps {
+export interface OptionsProps extends StyledOptionsProps, Omit<HTMLProps<HTMLUListElement>, 'size'> {
     id?: string;
     options: Option[];
     hasError?: boolean;
     onOptionClick: (option: Option) => void;
 }
-
-export type StyledOptionsProps = StyledProps;
