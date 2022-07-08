@@ -1,4 +1,4 @@
-import { includesIgnoreCase } from '@medly-components/utils';
+import { includesIgnoreCase, includesIgnoreCaseInArray } from '@medly-components/utils';
 import { Option } from './types';
 
 export const getInputValue = (selectedOptions: Option[]): string => {
@@ -18,6 +18,7 @@ export const filterOptions = (options: Option[], str: string) => {
     let newValues: Option[] = [];
     options.forEach(op => {
         if (Array.isArray(op.value)) newValues = [...newValues, ...filterOptions(op.value, str)];
+        else if (op.componentContent && includesIgnoreCaseInArray(op.componentContent, str)) newValues.push(op);
         else if (includesIgnoreCase(op.label, str)) newValues.push(op);
     });
     return newValues;
