@@ -38,7 +38,7 @@ export const OptionStyled = styled('li').attrs(({ theme: { singleSelect } }) => 
         background-color: ${({ disabled, selected, bgColor }) => !disabled && !selected && bgColor.pressed};
     }
 
-    & > ${Text.Style} {
+    & > div ${Text.Style} {
         flex: 1;
         user-select: none;
         white-space: nowrap;
