@@ -106,6 +106,27 @@ describe('MultiSelect component', () => {
         expect(mockOnChange).toHaveBeenCalledWith(['Dummy1']);
     });
 
+    it('should call onChange prop on selecting one custom component option', () => {
+        const mockOnChange = jest.fn();
+        render(
+            <MultiSelect
+                options={[
+                    ...options,
+                    {
+                        label: 'component',
+                        value: 'component',
+                        component: <div>Custom component</div>,
+                        componentContent: ['Dummy2 option', 'Custom component']
+                    }
+                ]}
+                onChange={mockOnChange}
+            />
+        );
+        fireEvent.click(screen.getByRole('textbox'));
+        fireEvent.click(screen.getByText('Custom component'));
+        expect(mockOnChange).toHaveBeenCalledWith(['component']);
+    });
+
     it('should call onChange prop with expected values on selecting option with numeric value', () => {
         const mockOnChange = jest.fn();
         render(<MultiSelect options={[{ value: 1, label: 'one' }]} onChange={mockOnChange} />);
@@ -144,6 +165,29 @@ describe('MultiSelect component', () => {
         fireEvent.click(inputEl);
         fireEvent.change(inputEl, { target: { value: 'Dummy2' } });
         expect(screen.queryByText('Dummy2')).toBeVisible();
+        expect(screen.queryByText('Dummy1')).not.toBeInTheDocument();
+    });
+
+    it('should render only matched options with custom options when input value changed', async () => {
+        const mockOnChange = jest.fn();
+        render(
+            <MultiSelect
+                options={[
+                    ...options,
+                    {
+                        label: 'component',
+                        value: 'component',
+                        component: <div>Custom component</div>,
+                        componentContent: ['Dummy2 option', 'Custom component']
+                    }
+                ]}
+                onChange={mockOnChange}
+            />
+        );
+        const inputEl = screen.getByRole('textbox');
+        fireEvent.click(inputEl);
+        fireEvent.change(inputEl, { target: { value: 'Custom' } });
+        expect(screen.queryByText('Custom component')).toBeVisible();
         expect(screen.queryByText('Dummy1')).not.toBeInTheDocument();
     });
 
