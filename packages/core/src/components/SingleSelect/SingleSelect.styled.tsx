@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Box from '../Box';
 import TextField from '../TextField';
 import { Suffix } from '../TextField/Styled';
 import { SelectWrapperProps } from './types';
@@ -43,4 +44,8 @@ export const Wrapper = styled('div')<SelectWrapperProps>`
             }
         }
     }
+`;
+
+export const StyledBox = styled(Box)`
+    flex-direction: column;
 `;
