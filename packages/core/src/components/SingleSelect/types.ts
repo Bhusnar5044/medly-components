@@ -1,6 +1,6 @@
 import { SvgIconProps } from '@medly-components/icons';
 import { HTMLProps, Omit } from '@medly-components/utils';
-import type { FC } from 'react';
+import type { FC, FocusEventHandler, ReactNode, RefObject } from 'react';
 
 export interface Option {
     /** Option value */
@@ -13,6 +13,10 @@ export interface Option {
     disabled?: boolean;
     /** This will be handled by component itself */
     hovered?: boolean;
+    /** to add custom option component */
+    component?: ReactNode;
+    /** to filter custom component options  */
+    componentContent?: string[];
 }
 
 export interface DefaultSelected {
@@ -43,6 +47,8 @@ export interface SingleSelectProps extends InputProps {
     includesNestedOptions?: boolean;
     /** Takes full width of the parent component */
     fullWidth?: boolean;
+    /** Takes max content width for options modal */
+    optionAutoWidth?: boolean;
     /** Set it true to disable the select action */
     disabled?: boolean;
     /** Show prefix, suffix, and character count elements. If set to false, only the input, label, and helper-text icon will be rendered. */
@@ -69,4 +75,21 @@ export interface SelectWrapperProps extends Omit<SingleSelectProps, 'ref' | 'opt
     variant: Required<SingleSelectProps>['variant'];
     isErrorPresent?: boolean;
     areOptionsVisible?: boolean;
+}
+
+export interface CommonProps {
+    id: string;
+    ref: RefObject<HTMLInputElement>;
+    value: any;
+    label?: string;
+    helperText?: string;
+    errorText: string;
+    onFocus: (event: React.FocusEvent<HTMLInputElement>) => void;
+    onBlur?: FocusEventHandler<HTMLInputElement>;
+    onKeyPress: (event: React.KeyboardEvent) => false | void;
+    disabled?: boolean | boolean;
+    showDecorators?: boolean;
+    areOptionsVisible: boolean;
+    onInvalid: () => void;
+    validator: () => string;
 }
