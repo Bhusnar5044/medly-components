@@ -1,4 +1,4 @@
-import { includesIgnoreCase } from '@medly-components/utils';
+import { includesIgnoreCase, includesIgnoreCaseInArray } from '@medly-components/utils';
 import { DefaultSelected, Option } from './types';
 
 export const getDefaultSelectedOption = (options: Option[], defaultSelected: any): Option => {
@@ -36,7 +36,9 @@ export const getUpdatedOptions = (
 
 export const filterOptions = (options: Option[], str: string): Option[] =>
     options.filter(op => {
-        return includesIgnoreCase(op.label, str) || (Array.isArray(op.value) && filterOptions(op.value, str).length);
+        return op?.componentContent
+            ? includesIgnoreCaseInArray(op.componentContent, str)
+            : includesIgnoreCase(op.label, str) || (Array.isArray(op.value) && filterOptions(op.value, str).length);
     });
 
 export const getNextOption = (selectedOption: Option, options: Option[]) => {
