@@ -1,6 +1,6 @@
 import { SvgIconProps } from '@medly-components/icons';
 import { HTMLProps, Omit } from '@medly-components/utils';
-import type { FC, FocusEventHandler, ReactNode, RefObject } from 'react';
+import type { FC, FocusEventHandler, ReactElement, RefObject } from 'react';
 
 export interface Option {
     /** Option value */
@@ -14,7 +14,7 @@ export interface Option {
     /** This will be handled by component itself */
     hovered?: boolean;
     /** to add custom option component */
-    component?: ReactNode;
+    component?: ReactElement<any>;
     /** to filter custom component options  */
     componentContent?: string[];
 }
