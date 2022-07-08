@@ -7,7 +7,7 @@ import FlatVariant from './FlatVariant';
 import { filterOptions, getDefaultSelectedOption, getUpdatedOptions } from './helpers';
 import Options from './Options';
 import * as Styled from './SingleSelect.styled';
-import { Option, SingleSelectProps } from './types';
+import { CommonProps, Option, SingleSelectProps } from './types';
 import { useKeyboardNavigation } from './useKeyboardNavigation';
 
 const Component: FC<SingleSelectProps> = memo(
@@ -30,6 +30,7 @@ const Component: FC<SingleSelectProps> = memo(
                 validator,
                 isSearchable,
                 suffix,
+                optionAutoWidth,
                 ...inputProps
             } = props,
             selectId = useMemo(() => id || inputProps.label?.toLocaleLowerCase() || 'medly-singleSelect', [id, inputProps.label]),
@@ -144,7 +145,7 @@ const Component: FC<SingleSelectProps> = memo(
             handleOuterClick();
         }, wrapperRef);
 
-        const commonProps = {
+        const commonProps: CommonProps = {
             id: `${selectId}`,
             ref: inputRef,
             value: inputValue,
@@ -201,6 +202,7 @@ const Component: FC<SingleSelectProps> = memo(
                         onOptionClick={handleOptionClick}
                         maxWidth={maxWidth}
                         includesNestedOptions={includesNestedOptions}
+                        optionAutoWidth={optionAutoWidth}
                     />
                 )}
             </Styled.Wrapper>
@@ -216,6 +218,7 @@ Component.defaultProps = {
     minWidth: '20rem',
     variant: 'filled',
     fullWidth: false,
+    optionAutoWidth: false,
     required: false,
     isSearchable: false,
     includesNestedOptions: false,
