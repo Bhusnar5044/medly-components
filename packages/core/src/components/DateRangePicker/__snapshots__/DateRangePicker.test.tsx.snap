@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "bottom" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -40,7 +40,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -48,7 +48,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -60,12 +60,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -105,57 +117,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "bottom-end" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -194,7 +226,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -202,7 +234,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -214,12 +246,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -256,57 +300,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "bottom-start" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -345,7 +409,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -353,7 +417,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -365,12 +429,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -407,57 +483,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "left" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -496,7 +592,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -504,7 +600,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -516,12 +612,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -561,57 +669,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "left-end" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -650,7 +778,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -658,7 +786,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -670,12 +798,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -712,57 +852,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "left-start" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -801,7 +961,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -809,7 +969,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -821,12 +981,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -863,57 +1035,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "right" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -952,7 +1144,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -960,7 +1152,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -972,12 +1164,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -1017,57 +1221,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "right-end" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -1106,7 +1330,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -1114,7 +1338,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1126,12 +1350,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -1168,57 +1404,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "right-start" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -1257,7 +1513,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -1265,7 +1521,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1277,12 +1533,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -1319,57 +1587,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "top" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -1408,7 +1696,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -1416,7 +1704,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1428,12 +1716,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -1473,57 +1773,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "top-end" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -1562,7 +1882,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -1570,7 +1890,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1582,12 +1902,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -1624,57 +1956,77 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
 
 exports[`DateRangePicker Custom date range options popover placement should render properly with "top-start" position 1`] = `
-.c4 {
+.c5 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -1713,7 +2065,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #F7F8F9;
 }
 
-.c2:hover > .c3 {
+.c2:hover > .c4 {
   color: #13181D;
 }
 
@@ -1721,7 +2073,7 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   background-color: #eff2f4;
 }
 
-.c2 > .c3 {
+.c2 > div .c4 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1733,12 +2085,24 @@ exports[`DateRangePicker Custom date range options popover placement should rend
   color: #13181D;
 }
 
-.c2 > .c5 {
+.c2 > .c6 {
   margin-left: 1.6rem;
 }
 
-.c2 > .c5 * {
+.c2 > .c6 * {
   fill: #13181D;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c0 {
@@ -1775,51 +2139,71 @@ exports[`DateRangePicker Custom date range options popover placement should rend
     class="c2"
     id="Current-Week"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Week
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Week
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Month"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Month
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Month
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Quarter"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Quarter
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Quarter
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Current-Year"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Current Year
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Current Year
+      </span>
+    </div>
   </li>
   <li
     class="c2"
     id="Custom"
   >
-    <span
-      class="c3 c4"
+    <div
+      class="c3"
     >
-      Custom
-    </span>
+      <span
+        class="c4 c5"
+      >
+        Custom
+      </span>
+    </div>
   </li>
 </ul>
 `;
@@ -2032,7 +2416,7 @@ exports[`DateRangePicker Custom date range options should render properly with c
   fill: #607890;
 }
 
-.c19 {
+.c20 {
   margin: 0;
   color: inherit;
   font-size: 1.6rem;
@@ -2071,7 +2455,7 @@ exports[`DateRangePicker Custom date range options should render properly with c
   background-color: #F7F8F9;
 }
 
-.c17:hover > .c18 {
+.c17:hover > .c19 {
   color: #13181D;
 }
 
@@ -2079,7 +2463,7 @@ exports[`DateRangePicker Custom date range options should render properly with c
   background-color: #eff2f4;
 }
 
-.c17 > .c18 {
+.c17 > div .c19 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2097,6 +2481,18 @@ exports[`DateRangePicker Custom date range options should render properly with c
 
 .c17 > .c2 * {
   fill: #13181D;
+}
+
+.c18 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 
 .c15 {
@@ -2164,30 +2560,30 @@ exports[`DateRangePicker Custom date range options should render properly with c
   transition: border-color 100ms ease-out;
 }
 
-.c20 .c9 {
+.c21 .c9 {
   color: #546A7F;
 }
 
-.c20 ~ .c13 {
+.c21 ~ .c13 {
   color: #546A7F;
 }
 
-.c20:focus-within .c9,
-.c20:focus-within:hover .c9 {
+.c21:focus-within .c9,
+.c21:focus-within:hover .c9 {
   color: #3872D2;
 }
 
-.c20 .c2:first-of-type {
+.c21 .c2:first-of-type {
   margin-right: 0.8rem;
 }
 
-.c20 .c2:nth-of-type(2) {
+.c21 .c2:nth-of-type(2) {
   -webkit-transition: -webkit-transform 200ms ease-out;
   -webkit-transition: transform 200ms ease-out;
   transition: transform 200ms ease-out;
 }
 
-.c20:hover .c11 {
+.c21:hover .c11 {
   border-color: #546A7F;
 }
 
@@ -2219,12 +2615,12 @@ exports[`DateRangePicker Custom date range options should render properly with c
   color: #546A7F;
 }
 
-.c1 .c21,
+.c1 .c22,
 .c1 .dynlvq-0 {
   color: #546A7F;
 }
 
-.c1 .c21 *,
+.c1 .c22 *,
 .c1 .dynlvq-0 * {
   fill: #546A7F;
 }
@@ -2271,15 +2667,15 @@ exports[`DateRangePicker Custom date range options should render properly with c
   color: #3872D2;
 }
 
-.c1:focus-within .c21,
-.c1:focus-within:hover .c21,
+.c1:focus-within .c22,
+.c1:focus-within:hover .c22,
 .c1:focus-within .dynlvq-0,
 .c1:focus-within:hover .dynlvq-0 {
   color: #3872D2;
 }
 
-.c1:focus-within .c21 *,
-.c1:focus-within:hover .c21 *,
+.c1:focus-within .c22 *,
+.c1:focus-within:hover .c22 *,
 .c1:focus-within .dynlvq-0 *,
 .c1:focus-within:hover .dynlvq-0 * {
   fill: #3872D2;
@@ -2429,51 +2825,71 @@ exports[`DateRangePicker Custom date range options should render properly with c
         class="c17"
         id="Current-Week"
       >
-        <span
-          class="c18 c19"
+        <div
+          class="c18"
         >
-          Current Week
-        </span>
+          <span
+            class="c19 c20"
+          >
+            Current Week
+          </span>
+        </div>
       </li>
       <li
         class="c17"
         id="Current-Month"
       >
-        <span
-          class="c18 c19"
+        <div
+          class="c18"
         >
-          Current Month
-        </span>
+          <span
+            class="c19 c20"
+          >
+            Current Month
+          </span>
+        </div>
       </li>
       <li
         class="c17"
         id="Current-Quarter"
       >
-        <span
-          class="c18 c19"
+        <div
+          class="c18"
         >
-          Current Quarter
-        </span>
+          <span
+            class="c19 c20"
+          >
+            Current Quarter
+          </span>
+        </div>
       </li>
       <li
         class="c17"
         id="Current-Year"
       >
-        <span
-          class="c18 c19"
+        <div
+          class="c18"
         >
-          Current Year
-        </span>
+          <span
+            class="c19 c20"
+          >
+            Current Year
+          </span>
+        </div>
       </li>
       <li
         class="c17"
         id="Custom"
       >
-        <span
-          class="c18 c19"
+        <div
+          class="c18"
         >
-          Custom
-        </span>
+          <span
+            class="c19 c20"
+          >
+            Custom
+          </span>
+        </div>
       </li>
     </ul>
   </div>
