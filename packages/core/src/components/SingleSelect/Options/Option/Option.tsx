@@ -11,7 +11,8 @@ import { OptionProps } from './types';
 const Component: FC<OptionProps> = memo(props => {
     const ref = useRef<HTMLLIElement>(null),
         [areOptionsVisible, setOptionsVisibilityState] = useState(false),
-        { value, theme, label, disabled, selected, onClick, hasError, hovered, size, variant, maxWidth, includesNestedOptions } = props,
+        { value, theme, label, disabled, selected, onClick, hasError, hovered, size, variant, maxWidth, includesNestedOptions, component } =
+            props,
         id = label.replace(/ /g, '-'),
         enterPress = useKeyPress('Enter'),
         leftPress = useKeyPress('ArrowLeft'),
@@ -59,16 +60,18 @@ const Component: FC<OptionProps> = memo(props => {
             onMouseEnter={showNestedOptions}
             onMouseLeave={hideNestedOptions}
         >
-            {isValidElement(value) && !isNested ? (
-                <CustomComponentWrapper>{value}</CustomComponentWrapper>
-            ) : (
-                <Text
-                    textWeight={selected ? 'Medium' : 'Regular'}
-                    textVariant={variant === 'flat' ? 'body3' : theme.singleSelect.option.textVariant[size]}
-                >
-                    {label}
-                </Text>
-            )}
+            <CustomComponentWrapper>
+                {!isNested && isValidElement(component) ? (
+                    component
+                ) : (
+                    <Text
+                        textWeight={selected ? 'Medium' : 'Regular'}
+                        textVariant={variant === 'flat' ? 'body3' : theme.singleSelect.option.textVariant[size]}
+                    >
+                        {label}
+                    </Text>
+                )}
+            </CustomComponentWrapper>
             {isNested ? <ArrowRightIcon size={variant === 'flat' ? 'S' : 'M'} /> : selected && variant !== 'flat' && <CheckIcon />}
             {areOptionsVisible && isNested && (
                 <Options
