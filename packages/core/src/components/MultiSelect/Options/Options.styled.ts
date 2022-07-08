@@ -11,14 +11,14 @@ export const ChipArea = styled.div<WithThemeProp>`
     }
 `;
 
-export const OptionsWrapper = styled.div<WithThemeProp & { size: 'S' | 'M' }>`
+export const OptionsWrapper = styled.div<WithThemeProp & { size: 'S' | 'M'; optionAutoWidth?: boolean }>`
     position: absolute;
     top: ${({ theme, size }) => theme.textField.height[size]};
     box-shadow: ${({ theme }) => `0px 2px 8px ${theme.colors.grey[400]}`};
     background-color: ${({ theme }) => theme.colors.white};
     box-sizing: border-box;
     border-radius: 0.4rem;
-    width: 100%;
+    width: ${({ optionAutoWidth }) => (optionAutoWidth ? 'max-content' : '100%')};
     z-index: 4;
 `;
 
@@ -31,11 +31,13 @@ export const Options = styled.ul<WithThemeProp & { size: 'S' | 'M' }>`
 
     ${Checkbox.Style} {
         width: 100%;
+        gap: 1.6rem;
         margin: 0;
         padding-top: 0.7rem;
         padding-bottom: 0.7rem;
         box-sizing: border-box;
-        span {
+        > span {
+            padding: 0;
             ${({ theme, size }) => getFontStyle({ theme, fontVariant: theme.multiSelect.options.textVariant[size] })}
         }
         &:hover {

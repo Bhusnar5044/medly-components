@@ -19,7 +19,8 @@ const Component: FC<OptionsProps> = memo(props => {
         setIsParentCursorEnabled,
         onOptionClick,
         showCreatableOption,
-        handleCreatableOptionClick
+        handleCreatableOptionClick,
+        optionAutoWidth
     } = props;
 
     const selectedValues = useMemo(() => values.map(op => op.value), [values]),
@@ -49,7 +50,7 @@ const Component: FC<OptionsProps> = memo(props => {
         );
 
     return (
-        <Styled.OptionsWrapper size={size} id={`${id}-options-wrapper`} onClick={stopPropagation}>
+        <Styled.OptionsWrapper size={size} id={`${id}-options-wrapper`} onClick={stopPropagation} optionAutoWidth={optionAutoWidth}>
             <Styled.ChipArea id={`${id}-selected-chips`}>
                 {values.length === 0 ? (
                     <p>-</p>
@@ -100,6 +101,7 @@ const Component: FC<OptionsProps> = memo(props => {
                                     name={op.value}
                                     id={`${id}-${op.label.replace(' ', '-')}-checkbox`}
                                     checked={selectedValues.includes(op.value)}
+                                    label={op.component ? op.component : op.label}
                                     isHovered={cursor === index}
                                     onChange={handleCheckboxClick(op.value)}
                                     onSelectionFromKeyboard={handleOptionSelection(op.value)}
