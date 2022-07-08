@@ -1,6 +1,7 @@
 import { cleanup, fireEvent, render, screen, waitFor } from '@test-utils';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
+import Box from '../Box';
 import Text from '../Text';
 import { SingleSelect } from './SingleSelect';
 import { SingleSelectProps } from './types';
@@ -56,7 +57,7 @@ describe('SingleSelect component', () => {
                 <SingleSelect
                     label="Label"
                     helperText="Helper Text"
-                    options={[...options, { value: <Text>Component</Text>, label: 'Custom component' }]}
+                    options={[...options, { value: 'Custom component', label: 'Custom component', component: <Text>Component</Text> }]}
                     variant={variant}
                     value="Dummy1"
                 />
@@ -154,8 +155,8 @@ describe('SingleSelect component', () => {
 
     it('should show options on click on drop icon when options are custom components', async () => {
         const componentAsOptions = [
-            { value: <>Component1</>, label: 'Component1' },
-            { value: <>Component2</>, label: 'Component2' }
+            { value: 'Component1', label: 'Component1', component: <>Component1</> },
+            { value: 'Component2', label: 'Component2', component: <>Component2</> }
         ];
         const { container } = render(<SingleSelect options={componentAsOptions} />);
         fireEvent.click(container.querySelector('svg') as SVGSVGElement);
@@ -210,6 +211,34 @@ describe('SingleSelect component', () => {
         expect(mockOnChange).toHaveBeenCalledWith('Dummy1');
     });
 
+    it('should show the selected custom component option label in input on click on the option', () => {
+        const mockOnChange = jest.fn();
+        render(
+            <SingleSelect
+                options={[
+                    ...options,
+                    {
+                        value: 'Custom component',
+                        label: 'Dummy Title',
+                        component: (
+                            <Box>
+                                <Text>Dummy title</Text>
+                                <Text>Dummy description</Text>
+                            </Box>
+                        ),
+                        componentContent: ['Dummy title', 'Dummy description']
+                    }
+                ]}
+                onChange={mockOnChange}
+            />
+        );
+
+        fireEvent.click(screen.getByRole('textbox'));
+        fireEvent.click(screen.getByText('Dummy description'));
+        expect(screen.getByRole('textbox')).toHaveValue('Dummy Title');
+        expect(mockOnChange).toHaveBeenCalledWith('Custom component');
+    });
+
     it('should call onChange with input value if input value matches any option label', () => {
         const mockOnChange = jest.fn();
         render(<SingleSelect options={options} onChange={mockOnChange} />);
@@ -254,7 +283,7 @@ describe('SingleSelect component', () => {
     });
 
     it('should render matched options when input values changes', async () => {
-        render(<SingleSelect options={options} />);
+        render(<SingleSelect isSearchable options={options} />);
         fireEvent.change(screen.getByRole('textbox'), { target: { value: 'Dummy' } });
         expect(screen.queryByText('All')).not.toBeInTheDocument();
         expect(screen.getByRole('list')).toBeVisible();
