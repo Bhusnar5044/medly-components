@@ -1,5 +1,6 @@
 import { ChevronDownIcon } from '@medly-components/icons';
 import styled, { css } from 'styled-components';
+import Box from '../Box';
 import TextField from '../TextField';
 import { InputSuffixStyled } from './InputSuffix/InputSuffix.styled';
 import { SelectWrapperProps } from './types';
@@ -58,4 +59,9 @@ export const Wrapper = styled.div<SelectWrapperProps>`
     ${({ areOptionsVisible, isErrorPresent, theme }) => areOptionsVisible && !isErrorPresent && iconStyle(theme.colors.blue[500])};
     ${({ isErrorPresent, theme }) => isErrorPresent && iconStyle(theme.colors.red[500])};
     ${({ disabled, theme }) => disabled && iconStyle(theme.colors.grey[400])};
+`;
+
+export const StyledBox = styled(Box)`
+    flex-direction: column;
+    padding-right: 1rem;
 `;
